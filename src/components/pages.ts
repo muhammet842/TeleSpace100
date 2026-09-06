@@ -17,6 +17,7 @@ export const pages: TeletextPage[] = [
       '100  MAIN MENU',
       '200  SPACE WEATHER',
       '300  NASA APOD',
+      '400  SPACE NEWS',
       '',
       'TELESPACE 100 / 1984-2026',
     ],
@@ -32,6 +33,12 @@ export const pages: TeletextPage[] = [
     title: 'NASA APOD',
     color: 'blue',
     lines: ['COMING SOON: NASA\'S', 'ASTRONOMY PICTURE OF THE DAY'],
+  },
+  {
+    number: 400,
+    title: 'P400 TELESPACE_NEWS',
+    color: 'green',
+    lines: ['COMING SOON: CURRENT', 'SPACEFLIGHT NEWS'],
   },
 ]
 
