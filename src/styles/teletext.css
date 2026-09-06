@@ -102,6 +102,16 @@ body::after {
 .page-red .screen-title { color: #ff4040; }
 .page-yellow .screen-title { color: #ffff35; }
 .page-white .screen-title { color: #f4f4f4; }
+.status-green { color: #35ff65; }
+.status-yellow { color: #ffff35; }
+.status-red {
+  color: #ff4040;
+  animation: warning-blink 0.8s steps(2, start) infinite;
+}
+
+@keyframes warning-blink {
+  50% { opacity: 0.25; }
+}
 
 @media (max-width: 560px) {
   #teletext-screen { padding: 28px 16px; }
