@@ -4,6 +4,8 @@ export type ApodData = {
     title: string
     date: string
     explanation: string
+    url: string
+    media_type: string
 }
 
 export async function fetchApod(): Promise<ApodData | null> {
@@ -17,7 +19,7 @@ export async function fetchApod(): Promise<ApodData | null> {
 
         const data = (await response.json()) as Partial<ApodData>
 
-        if(!data.title || !data.date || !data.explanation)
+        if(!data.title || !data.date || !data.explanation || !data.url || data.media_type !== 'image')
         {
             throw new Error('NASA returned incomplete APOD data')
         }
@@ -25,7 +27,9 @@ export async function fetchApod(): Promise<ApodData | null> {
         return {
             title: data.title,
             date: data.date,
-            explanation: data.explanation
+            explanation: data.explanation,
+            url: data.url,
+            media_type: data.media_type,
         }
     }
 

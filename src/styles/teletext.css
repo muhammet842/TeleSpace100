@@ -56,6 +56,14 @@ body::after {
   text-shadow: 0 0 7px currentColor;
 }
 
+#teletext-screen.apod-background {
+  background-image:
+    linear-gradient(rgba(5, 5, 5, 0.72), rgba(5, 5, 5, 0.9)),
+    var(--apod-image);
+  background-position: center;
+  background-size: cover;
+}
+
 .screen-content {
   width: 100%;
 }

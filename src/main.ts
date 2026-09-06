@@ -35,6 +35,12 @@ function drawPage(
   message?: string,
 ) {
   teletextScreen.className = `page-${page.color}`
+  teletextScreen.style.removeProperty('--apod-image')
+
+  if (page.number === 300 && apod) {
+    teletextScreen.classList.add('apod-background')
+    teletextScreen.style.setProperty('--apod-image', `url("${apod.url}")`)
+  }
 
   renderedPage.innerHTML = `
       <header class="screen-header">
