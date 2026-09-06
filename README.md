@@ -92,18 +92,6 @@ For a deployment build, add `VITE_NASA_API_KEY` to the hosting provider's enviro
 - NOAA Space Weather API
 - NASA APOD API
 
-## Project Structure
-
-```text
-src/
-	components/pages.ts   Static Teletext page content
-	services/noaa.ts      NOAA space weather request
-	services/nasa.ts      NASA APOD request
-	styles/teletext.css   CRT and Teletext styling
-	utils/keyboard.ts     Keyboard page navigation
-	main.ts               App entry point
-```
-
 ## License
 
 This project is made for learning and experimentation.
